@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///C:/Users/Praneeth%20Kalluri/Desktop/html-css/resume.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      html {
+        height: auto;
+        background-image: linear-gradient(to bottom right, #afdbf5, #ffecf2);
+      }
+
+      body {
+        height: auto;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      /* Header/Blog Title */
+      .header {
+        padding: 10px;
+      }
+      .sub-header-flex {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+      }
+      .header h2 {
+        margin-top: 8px !important;
+        margin-right: 0px !important;
+        margin-bottom: 8px !important;
+        margin-left: 0px !important;
+      }
+      .clearfix::after {
+        content: "";
+        clear: right;
+        display: table;
+      }
+      .bio {
+        font-size: 16px;
+        text-align: justify;
+      }
+
+      .main-content {
+        margin-left: 12%;
+        margin-right: 12%;
+      }
+
+      /* Container for flexboxes */
+      .main-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .sub-flex {
+        display: flex;
+      }
+      /* Style the Headings menu */
+      subsec1 {
+        flex: 1;
+        /*background: #ccc;*/
+        padding: 10px;
+      }
+
+      /* Style the content */
+      subsec2 {
+        flex: 3;
+        /*background-color: #f1f1f1;*/
+        padding: 10px;
+      }
+
+      .topic-heading {
+        color: #777;
+        font-weight: 500 !important;
+        font-size: 18px;
+      }
+
+      .sub-topic-heading {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      .sub-topic-content {
+        margin-top: 6px;
+        font-size: 16px;
+      }
+
+      .education-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .education-descp-flex-item {
+        flex: 3;
+      }
+
+      .education-title {
+        margin-bottom: 12px;
+      }
+      .education-desp {
+        margin-top: 8px;
+      }
+
+      .education-timeline-flex-item {
+        flex: 1;
+      }
+
+      #ml-content,
+      #lang-content {
+        display: None;
+      }
+
+      /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .sub-header-flex {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+        }
+        .bio {
+          padding: 10px;
+        }
+        .header {
+          padding: 0px;
+        }
+
+        .sub-flex {
+          display: flex;
+          flex-direction: column;
+        }
+        .main-content {
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+      }
+    </style>
+    <script>
+      function show_content(parent_id) {
+        var dom_object = document.getElementById(
+          parent_id.replace("-heading", "") + "-content"
+        );
+        if (
+          dom_object.style.display == "none" ||
+          dom_object.style.display == ""
+        ) {
+          dom_object.style.display = "block";
+        } else {
+          dom_object.style.display = "none";
+        }
+      }
+      // First we check if you support touch, otherwise it's click:
+      let touchEvent = "ontouchstart" in window ? "touchstart" : "click";
+
+      // Then we bind via thát event. This way we only bind one event, instead of the two as below
+      document
+        .getElementById("lang-heading")
+        .addEventListener(touchEvent, show_content);
+    </script>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="main-flex">
+        <div class="header">
+          <div class="sub-header-flex">
+            <subsec1>
+              <img
+                src="./resume_files/getty_495142964_198701.webp"
+                width="100"
+                height="100"
+              />
+            </subsec1>
+            <subsec2>
+              <h2>Manasa Kalluri</h2>
+              <p
+                style="font-size: 80%; margin-top: 0px !important; color: #777"
+              >
+                7032556084 | manasakalluri94@gmail.com | Hyderabad,India
+              </p>
+            </subsec2>
+          </div>
+          <p class="bio">
+            A continuous learner with a strong ability in quickly adapting to
+            emerging technologies and driven to tackle complex challenges, eager
+            to contribute innovative AI-driven solutions. Holding a Master’s
+            degree in AI and ML, I bring a deep understanding, complemented by
+            extensive hands-on experience in executing advanced projects. With
+            6+ years as a Network Engineer, specializing in designing,
+            automating, and troubleshooting complex network systems and leading
+            teams, I am now focused on transitioning into AI/ML roles to fuel my
+            passion and further apply my technical expertise.
+          </p>
+        </div>
+
+        <section class="sub-flex">
+          <subsec1>
+            <h3 class="topic-heading">Technical Skills</h3>
+          </subsec1>
+          <subsec2>
+            <p
+              class="sub-topic-heading"
+              id="lang-heading"
+              onclick="show_content('lang-heading')"
+              ontouchstart="show_content('lang-heading')"
+            >
+              Language
+            </p>
+            <p class="sub-topic-content" id="lang-content">Python</p>
+            <h3
+              class="sub-topic-heading"
+              id="ml-heading"
+              onclick="show_content('ml-heading')"
+              ontouchstart="show_content('ml-heading')"
+            >
+              Machine Learning
+            </h3>
+            <div id="ml-content">
+              <p class="sub-topic-content"></p>
+              <li>
+                Regression and Classification (Linear, Non-Linear, Ensemble
+                models)
+              </li>
+              <li>Unsupervised Leaning(Clustering)</li>
+              <li>Reinforcement Learning</li>
+              <li>
+                End-to-End ML pipeline (Data Preprocessing, Data Visualisation,
+                FeatureEngineering, Model evaluation)
+              </li>
+              <p></p>
+            </div>
+            <h3 class="sub-topic-heading">Deep Learning</h3>
+            <p class="sub-topic-content"></p>
+            <li>ANNs, CNNs, RNNs, Transformers, Autoencoders, GANs</li>
+            <li>
+              Computer Vision: Image Analysis (Segmentation, Detection, etc.)
+              Image transformations (Entity based manipulation, Restoration
+              etc.) Video Analysis (Motion Detection and Estimation,
+              Summarisation etc.)
+            </li>
+            <li>
+              Natural Language Processing: Tokenization, Embedding Techniques
+              (Word2Vec, GloVe), Transformers (BERT,GPT).
+            </li>
+            <li>
+              AI: Using (Ollama, Lama etc.) in image enhancement, content
+              creation, and Q&amp;A systems.
+            </li>
+            <p></p>
+            <h3 class="sub-topic-heading">Tools and Frameworks</h3>
+            <p class="sub-topic-content">
+              Numpy,Pandas,TensorFlow, PyTorch, Scikit-learn, OpenCV, Keras,
+              Spark, Langchain, Streamlit.
+            </p>
+            <h3 class="sub-topic-heading">Cloud</h3>
+            <p class="sub-topic-content">AWS, Azure</p>
+            <h3 class="sub-topic-heading">Networking</h3>
+            <p class="sub-topic-content"></p>
+            <li>
+              Network Security (Palo Alto, Cisco ASA etc), IPSEC VPNs, Routing
+              (OSPF, EIGRP) and Switching(L2/L3) on Cisco devices and Dell OS10
+              devices, Load Balancers (F5 BIG-IP), Citrix Netscalar
+            </li>
+            <li>
+              Protocols: SNMP, TCP/IP, ICMP, ARP, DNS, DHCP, SSL/TLS, SMTP
+            </li>
+            <li>Network Monitoring: Solarwinds, Nagios, OpenNMS</li>
+            <li>
+              Network Protocol Testing: Manual, Automation (Using Ansible, Robot
+              Framework)
+            </li>
+            <li>
+              Secure Access control: Multi-Factor Authentication, LDAP, RSA,
+              TACACS, Radius
+            </li>
+            <p></p>
+          </subsec2>
+        </section>
+
+        <section class="sub-flex">
+          <subsec1>
+            <h3 class="topic-heading">Certifications</h3>
+          </subsec1>
+          <subsec2>
+            <p class="sub-topic-content"></p>
+            <li>AWS Certified Solutions Architect - Associate</li>
+            <li>Microsoft Certified: Azure AI Engineer Associate</li>
+            <li>Microsoft Certified: Azure Fundamentals</li>
+            <p></p>
+          </subsec2>
+        </section>
+
+        <section class="sub-flex">
+          <subsec1>
+            <h3 class="topic-heading">Related Projects</h3>
+          </subsec1>
+          <subsec2>
+            <h3 class="sub-topic-heading">
+              Content Aware Image Super Resolution
+            </h3>
+            <p class="sub-topic-content">
+              Designed and implemented pipeline that applies various resoluting
+              techniques based on the entity, which significantly improves image
+              quality compared to traditional technique of applying uniform SR
+              methods throughout the image.
+            </p>
+            <li>
+              Key Components and Techniques: YoloV9, SAM, SRCNN, SRGAN,
+              SRResNet, ESRGAN, Gray scale and Histogram transformations,
+              Connected Components, Image region descriptors using SIFT, Canny
+              Edge Detection, Line Detection using Hough Transform
+            </li>
+            <p></p>
+            <h3 class="sub-topic-heading">Entity Specific Image Obfuscation</h3>
+            <p class="sub-topic-content">
+              Designed and developed a pipeline which applies dynamic
+              obfuscation over an entity derived from custom trained ML ensemble
+              model, based on the perception of it's location, and the expected
+              structural dissimilarity.
+            </p>
+            <li>
+              Key Components and Techniques: YoloV9, SAM, ROI masking, Lama,
+              Gaussian Blur, Streamlit, ML ensemble models
+            </li>
+            <p></p>
+            <h3 class="sub-topic-heading">
+              RAG based Conversational AI Chatbot
+            </h3>
+            <p class="sub-topic-content">
+              A conversational AI chatbot that retrieves information from custom
+              data obtained from varied sources and responds to the user.
+            </p>
+            <li>
+              Key Components and Techniques: OpenAI, Llama_index, Langchain,
+              Streamlit, HuggingFace
+            </li>
+            <p></p>
+          </subsec2>
+        </section>
+
+        <section class="sub-flex">
+          <subsec1>
+            <h3 class="topic-heading">Education</h3>
+          </subsec1>
+          <subsec2>
+            <section class="education-flex">
+              <div class="education-descp-flex-item">
+                <h3 class="education-title">
+                  MTech. Artificial Intelligence &amp; Machine Learning
+                </h3>
+
+                <p class="education-desp">
+                  Birla Institute of Technology &amp; Science, Pilani (WILP)
+                </p>
+              </div>
+              <div class="education-timeline-flex-item">
+                <p>(Sep 2022 - Sep 2024)</p>
+              </div>
+            </section>
+
+            <subsec2>
+              <section class="education-flex">
+                <div class="education-descp-flex-item">
+                  <h3 class="education-title">
+                    BTech. in Electrical and Electronics Engineering
+                  </h3>
+
+                  <p class="education-desp">
+                    Gurunanak Institute of Technology, Hyderabad
+                  </p>
+                </div>
+                <div class="education-timeline-flex-item">
+                  <p>(Jun 2013 - May 2017)</p>
+                </div>
+              </section>
+            </subsec2>
+          </subsec2>
+        </section>
+
+        <section class="sub-flex">
+          <subsec1>
+            <h3 class="topic-heading">Professional Experience</h3>
+          </subsec1>
+          <subsec2>
+            <h3 class="sub-topic-heading">
+              HCL Technologies, Hyderabad, Telangana (Sep 2022-Present)
+            </h3>
+            <p class="sub-topic-content">
+              Dell OS10: Working as System Test Engineer for Dell Smartfabric
+              OS10 operating system
+            </p>
+            <li>
+              Design, develop and execute automation and manual testing for
+              networking features like Ethernet, RSTP/MSTP,VLANs,IP Routing,
+              TCP/IP, OSPF, BGP, QOS, L2-L3 protocols, platform management, HA,
+              network management on scaled systems of Dell OS10 products
+            </li>
+            <li>Analyse network vulnerabilities through OpenVAS and ClamAV</li>
+            <li>Certify OS platforms for Dell Network switches</li>
+            <li>
+              Work closely with the Software Engineering and Product Management
+              teams during product development from design to release.
+            </li>
+            <p></p>
+            <h3 class="sub-topic-heading">
+              TechMahindra, Hyderabad, Telangana (Jul 2018 - Aug 2022)s
+            </h3>
+            <p class="sub-topic-content">
+              Quorum Health Corporation: Worked as Network Operation Center Lead
+              for a team of 8. Handled infrastructure services to a leading
+              acute healthcare services operator in US which dealt with several
+              hospitals and clinics under it.
+            </p>
+            <li>
+              Optimized incident handling ability among team and reduced SLA
+              breach from 25% to 1%
+            </li>
+            <li>
+              Implemented setup of SNMP monitoring software SolarWinds.
+              Undertook 2500+ infrastructure devices monitoring setup,
+              configuration, and optimization of 70+ alerts, setup NCM backups
+              for all devices.
+            </li>
+            <li>
+              Troubleshooting complex multi-vendor network service provider
+              issues.
+            </li>
+            <li>Worked on Cisco switches, routers, PaloAlto firewall.</li>
+            <p></p>
+            <p class="sub-topic-content">
+              General Electric HTS: Worked as Network Engineer. GE HTS provided
+              support for different business segments in healthcare by hosting
+              their data in HTS Data Center. Handled the network requirements
+              including security for 64 facilities where i’ve worked with
+              customers on resolving critical network outages.
+            </p>
+            <li>
+              Worked on Cisco ASA, Cisco catalyst and Nexus switches, Palo Alto,
+              SSL certificates management on F5 and Cisco ASAs. Access rules,
+              NAT rules, building contexts, VLAN configuration, packet captures
+              in Cisco ASA5500 series
+            </li>
+            <li>
+              Implemented setup and configuration of Linux based Nagios
+              Monitoring system.
+            </li>
+            <li>
+              Created VPN infrastructure for 15 hospitals, allowing for secure
+              remote connections.
+            </li>
+            <li>
+              Responsible for build, implementation and troubleshooting of IPSEC
+              tunnels.
+            </li>
+            <p></p>
+          </subsec2>
+        </section>
+
+        <section class="sub-flex">
+          <subsec1>
+            <h3 class="topic-heading">Honors &amp; Awards</h3>
+          </subsec1>
+          <subsec2>
+            <p class="sub-topic-content"></p>
+            <li>HCL ERS Delivery Champion Award, 2024</li>
+            <li>Bravo Award by TechMahindra, Mar 2022</li>
+            <li>Pat on Back Award by TechMahindra, 2021</li>
+            <li>Pat on Back Award by TechMahindra, 2020</li>
+            <p></p>
+          </subsec2>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
